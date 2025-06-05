@@ -25,7 +25,7 @@ A flexible logout application for Wayland with Material You theming support. Dep
 - GTK4 development libraries
 - gtk4-layer-shell
 
-On CachyOS/Arch Linux:
+On Arch Linux:
 ```bash
 sudo pacman -S rust gtk4 gtk4-layer-shell
 ```
