@@ -33,7 +33,7 @@ sudo pacman -S rust gtk4 gtk4-layer-shell
 ### Building from Source
 
 ```bash
-git clone https://github.com/your-username/departure.git
+git clone https://github.com/mpalatsi/departure.git
 cd departure
 cargo build --release
 sudo cp target/release/departure /usr/local/bin/
