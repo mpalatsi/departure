@@ -3,6 +3,10 @@
 
 # Departure
 
+[![AUR Version](https://img.shields.io/aur/version/departure)](https://aur.archlinux.org/packages/departure)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=flat&logo=rust&logoColor=white)](https://www.rust-lang.org/)
+
 A flexible logout application for Wayland with Material You theming support. Departure provides a modern, customizable logout interface with buttons, blur effects, and support for multiple theming systems including pywal, matugen, and manual colors.
 
 ![Departure Demo](departure-demo.gif)
@@ -19,7 +23,24 @@ A flexible logout application for Wayland with Material You theming support. Dep
 
 ## Installation
 
-### Prerequisites
+### Arch Linux (AUR)
+
+```bash
+# Using yay
+yay -S departure
+
+# Using paru  
+paru -S departure
+
+# Manual AUR installation
+git clone https://aur.archlinux.org/departure.git
+cd departure
+makepkg -si
+```
+
+### Building from Source
+
+#### Prerequisites
 
 - Rust (latest stable)
 - GTK4 development libraries
@@ -30,7 +51,7 @@ On Arch Linux:
 sudo pacman -S rust gtk4 gtk4-layer-shell
 ```
 
-### Building from Source
+#### Build Steps
 
 ```bash
 git clone https://github.com/mpalatsi/departure.git
@@ -154,7 +175,7 @@ Available layout types:
 # Generate default configuration
 departure --generate-config
 
-# Print current theme colors
+# Print current theme colors  
 departure --print-theme
 
 # Use custom configuration file
@@ -166,6 +187,8 @@ departure --theme-source manual
 # Enable debug logging
 departure --debug
 ```
+
+**Note**: After installing via AUR, departure will be available system-wide in your PATH.
 
 ## Integration Examples
 
