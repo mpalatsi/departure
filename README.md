@@ -3,7 +3,7 @@
 
 # Departure
 
-A flexible logout application for Wayland with Material You theming support. Departure provides a modern, customizable logout interface with circular buttons, blur effects, and support for multiple theming systems including pywal, matugen, and manual colors.
+A flexible logout application for Wayland with Material You theming support. Departure provides a modern, customizable logout interface with buttons, blur effects, and support for multiple theming systems including pywal, matugen, and manual colors.
 
 ![Departure Demo](departure-demo.gif)
 
@@ -25,7 +25,7 @@ A flexible logout application for Wayland with Material You theming support. Dep
 - GTK4 development libraries
 - gtk4-layer-shell
 
-On CachyOS/Arch Linux:
+On Arch Linux:
 ```bash
 sudo pacman -S rust gtk4 gtk4-layer-shell
 ```
