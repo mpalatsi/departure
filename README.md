@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/16c4bcd9-3dcd-4b2f-9c67-da1fa5895eaf)
+
+
 # Departure
 
 A flexible logout application for Wayland with Material You theming support. Departure provides a modern, customizable logout interface with circular buttons, blur effects, and support for multiple theming systems including pywal, matugen, and manual colors.
