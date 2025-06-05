@@ -180,7 +180,7 @@ impl DepartureApp {
             if std::path::Path::new(&action.icon).exists() {
                 log::info!("Loading custom icon from file: {}", action.icon);
                 let image = gtk4::Image::from_file(&action.icon);
-                image.set_pixel_size(64); // Set a good size for custom icons
+                image.set_pixel_size(48); // Set a good size for custom icons
                 Some(image.upcast::<gtk4::Widget>())
             } else {
                 log::warn!("Custom icon file not found: {}", action.icon);
@@ -190,7 +190,7 @@ impl DepartureApp {
             // System icon name
             log::info!("Loading system icon: {}", action.icon);
             let image = gtk4::Image::from_icon_name(&action.icon);
-            image.set_icon_size(gtk4::IconSize::Large);
+            image.set_pixel_size(48); // Match custom icon size
             Some(image.upcast::<gtk4::Widget>())
         };
 

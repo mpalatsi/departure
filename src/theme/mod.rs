@@ -200,10 +200,10 @@ window {{
     background: {background};
 }}
 
-/* Glassmorphic card buttons with enhanced glow */
+/* Glassmorphic card buttons with theme-colored glow */
 .departure-button {{
     background: rgba(255, 255, 255, 0.08);
-    border: 2px solid rgba(0, 245, 255, 0.3);
+    border: 2px solid {primary};
     border-radius: 16px;
     color: {text};
     font-weight: 700;
@@ -213,24 +213,24 @@ window {{
     box-shadow: 
         0 15px 35px rgba(0, 0, 0, 0.4),
         0 5px 15px rgba(0, 0, 0, 0.3),
-        0 0 20px rgba(0, 245, 255, 0.2),
-        0 0 40px rgba(0, 245, 255, 0.1),
+        0 0 20px {primary},
+        0 0 40px {primary},
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transition: all 300ms ease;
     padding: 16px;
     opacity: 0.85;
 }}
 
-/* Hover effects with enhanced glow */
+/* Hover effects with enhanced theme-colored glow */
 .departure-button:hover {{
     background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(0, 245, 255, 0.6);
+    border-color: {secondary};
     box-shadow: 
         0 20px 40px rgba(0, 0, 0, 0.5),
-        0 8px 25px rgba(0, 245, 255, 0.3),
-        0 0 30px rgba(0, 245, 255, 0.4),
-        0 0 60px rgba(0, 245, 255, 0.2),
-        0 0 100px rgba(0, 245, 255, 0.1),
+        0 8px 25px {primary},
+        0 0 30px {secondary},
+        0 0 60px {primary},
+        0 0 100px {secondary},
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     opacity: 1.0;
     transform: translateY(-2px);
@@ -244,24 +244,35 @@ window {{
 
 /* Danger variant */
 .departure-button.danger {{
-    border-color: rgba(255, 107, 107, 0.4);
+    border-color: {danger};
 }}
 
 .departure-button.danger:hover {{
-    border-color: rgba(255, 107, 107, 0.7);
+    border-color: {danger};
     box-shadow: 
         0 20px 40px rgba(0, 0, 0, 0.5),
-        0 8px 25px rgba(255, 107, 107, 0.4),
+        0 8px 25px {danger},
+        0 0 30px {danger},
+        0 0 60px {danger},
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }}
 
 /* Button text styling */
 .departure-button-text {{
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
     color: {text};
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
     opacity: 0.9;
+}}
+
+/* SVG icon styling - no filters for crispness */
+.departure-button image {{
+    opacity: 0.9;
+}}
+
+.departure-button:hover image {{
+    opacity: 1;
 }}
 
 .departure-button:hover .departure-button-text {{
@@ -270,7 +281,7 @@ window {{
 
 /* Fallback text styling */
 .departure-button-fallback {{
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 900;
     color: {text};
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -335,6 +346,9 @@ window {{
 "#,
             text = colors.text,
             background = colors.background,
+            primary = colors.primary,
+            secondary = colors.secondary,
+            danger = colors.danger,
         )
     }
 
